@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/main.b6997717.chunk.js",
+    "main.js.map": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/main.b6997717.chunk.js.map",
+    "runtime-main.js": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/runtime-main.fdfa6624.js",
+    "runtime-main.js.map": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/runtime-main.fdfa6624.js.map",
+    "static/js/2.0f6ffbb5.chunk.js": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/2.0f6ffbb5.chunk.js",
+    "static/js/2.0f6ffbb5.chunk.js.map": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/2.0f6ffbb5.chunk.js.map",
+    "index.html": "/%7Bsimple-pokedex-crud-react-typescript%7D/index.html",
+    "static/js/2.0f6ffbb5.chunk.js.LICENSE.txt": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/js/2.0f6ffbb5.chunk.js.LICENSE.txt",
+    "static/media/loading.a937902d.gif": "/%7Bsimple-pokedex-crud-react-typescript%7D/static/media/loading.a937902d.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdfa6624.js",
+    "static/js/2.0f6ffbb5.chunk.js",
+    "static/js/main.b6997717.chunk.js"
+  ]
+}
