@@ -14,7 +14,7 @@ export const PokemonContainer = styled.div<IPokemonContainer>`
   width: 300px;
   height: 180px;
   padding: 15px;
-  margin-bottom: 16px;
+  margin: 16px;
   border-radius: 8px;
 
   transition: box-shadow 0.4s;
