@@ -7,7 +7,7 @@ import {
   useCallback,
 } from "react";
 import { PokemonModel } from "../models/PokemonModel";
-import { getPokemons } from "../services/pokemon";
+import { getPokemons, createPokemon } from "../services/pokemon";
 
 interface PokedexProviderProps {
   children: ReactNode;
@@ -24,11 +24,11 @@ interface PokedexContextData {
 export const PokedexContext = createContext({} as PokedexContextData);
 
 export function PokedexProvider({ children }: PokedexProviderProps) {
-  const [isFetchingPokedex, setIsFetchingPokedex] = useState(false);
+  const [isFetchingPokedex, setIsFetchingPokedex] = useState(true);
   const [pokemons, setPokemons] = useState<Array<PokemonModel>>([]);
 
-  const getAll = useCallback(async () => {
-    setIsFetchingPokedex(true);
+  const getAll = useCallback(async (showLoader = false) => {
+    if (showLoader) setIsFetchingPokedex(true);
     setTimeout(async () => {
       const pokemonsResponse = await getPokemons();
       if (pokemonsResponse && pokemonsResponse.pokemons) {
@@ -42,8 +42,20 @@ export function PokedexProvider({ children }: PokedexProviderProps) {
     getAll();
   }, [getAll]);
 
-  function addPokemon() {
-    // TODO: add pokemon POST
+  async function addPokemon(pokemon: PokemonModel) {
+    setIsFetchingPokedex(true);
+
+    try {
+      const response = await createPokemon(pokemon);
+
+      if (response) {
+        await getAll();
+        return;
+      }
+      setIsFetchingPokedex(false);
+    } catch (err) {
+      setIsFetchingPokedex(false);
+    }
   }
 
   function updatePokemon() {

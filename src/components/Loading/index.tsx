@@ -5,7 +5,7 @@ export function Loading() {
   return (
     <S.LoadingPokedexContainer>
       <img src={LoadingGif} alt="Loading..." />
-      <span>Carregando Pokedéx...</span>
+      <span>Operando na Pokedéx...</span>
     </S.LoadingPokedexContainer>
   );
 }

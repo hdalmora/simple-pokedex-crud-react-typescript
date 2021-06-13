@@ -19,3 +19,20 @@ export const getPokemons = async (): Promise<PokemonResponse> => {
     throw err;
   }
 };
+
+export const createPokemon = async (
+  pokemon: PokemonModel
+): Promise<boolean> => {
+  pokemon.speed = 1;
+  pokemon.defence = 1;
+
+  try {
+    const response = await axios.post(baseURL, pokemon);
+
+    console.log("post", response.data);
+    return response.data.status === "success";
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+};
